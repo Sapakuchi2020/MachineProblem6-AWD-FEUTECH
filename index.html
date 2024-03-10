@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu by Nichole Monzon (TW24)</title>
+<link rel="stylesheet" href="./Assets/CSS/style.css">
+</head>
+<body>
+    <div class="menu-wrapper">
+        <div class="menu-title-box">
+            <center>
+                <img class="i" src="https://queen.jollibee.com.ph/2024/01/QOYbF7dZ-jollibee-logo-2x.png">
+            </center>
+        </div>
+        <div class="menu-container">
+            <header class="menu-header">
+                <h1 class="v">MENU</h1>
+            </header>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="https://queen.jollibee.com.ph/2022/01/1pc-Chickenjoy-Solo.png" alt="1-pc. Chickenjoy Solo">
+                    <p>1-pc. Chickenjoy Solo ₱75.00</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://queen.jollibee.com.ph/2022/01/Cheesy-Yumburger-Solo.png" alt="Cheesy Yumburger">
+                    <p>Cheesy Yumburger ₱35.00</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://queen.jollibee.com.ph/2022/01/Burger-Bundle.png" alt="Burger Bundle">
+                    <p>Burger Bundle ₱110.00</p>
+                </div>
+                <div class="menu-item">
+                    <img src="https://queen.jollibee.com.ph/2023/05/Jolly-Spaghetti-w-Fries-Drink-min.png" alt="Jolly Spaghetti w/ Fries & Drink">
+                    <p>Jolly Spaghetti w/ Fries & Drink ₱85.00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="order-form">
+        <div class="form-header">
+            <h2>Order Form</h2>
+            <div class="item-counter">0</div>
+        </div>
+        <form id="orderForm">
+            <div class="form-group">
+                <br>
+                <h3 style="font-weight: bold;">What's Your Order?</h3>
+                <label for="talknenengQty">1-pc. Chickenjoy Solo Quantity:</label>
+                <input type="number" id="chickenjoyQty" name="chickenjoy" min="0" value="0">
+                <br>
+                <label for="tworonQty">Cheesy Yumburger Quantity:</label>
+                <input type="number" id="burgeryQty" name="burger" min="0" value="0">
+                <br>
+                <label for="killermareQty">Burger Bundle Quantity:</label>
+                <input type="number" id="bundleQty" name="bundle" min="0" value="0">
+                <br>
+                <label for="behnenqueueQty">Jolly Spaghetti w/ Fries & Drink Quantity:</label>
+                <input type="number" id="spaghettiQty" name="spaghetti" min="0" value="0">
+                <br>
+                <label for="totalBill" style="font-weight: bold;">Total Bill (₱):</label>
+                <input type="number" id="totalBill" name="totalBill" value="0" readonly>
+                <br>
+                <label for="cashGiven">Cash (₱):<span style="color: red;">*</span></label>
+                <input type="number" id="cashGiven" name="cashGiven" min="0" value="0">
+            </div>
+        </form>
+    </div>
+
+    <div class="customer-info-wrapper"> 
+        <div class="customer-info">
+            <h2>Customers' Information</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+            <br>
+            <label for="contactNumber">Contact Number:</label>
+            <input type="text" id="contactNumber" name="contactNumber">
+            <br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-left">
+          <p>Delivery Hotline:</p>
+          <p class="phone-number">8-7000</p> 
+        </div>
+        <div class="footer-center">
+          <p>© Jollibee Foods Corporation 2024</p>  
+        </div>
+
+        </div>
+        <div class="footer-right">
+            <p>Don't forget to follow us!</p>
+            <a href="https://www.facebook.com/JollibeePhilippines/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1200px-Facebook_Logo_%282019%29.png">
+        </a>
+        <a href="https://twitter.com/Jollibee?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+            <img src="https://seeklogo.com/images/T/twitter-x-logo-0339F999CF-seeklogo.com.png?v=638264860180000000">
+        </a>
+        <a href="https://www.instagram.com/jollibee/?hl=en">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png">
+        </a>
+        </div>
+    </footer>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="sales-invoice">Sales Invoice</h2>
+            <p>Name: <span id="modalName"></span></p>
+            <p>Address: <span id="modalAddress"></span></p>
+            <p>Contact Number: <span id="modalContactNumber"></span></p>
+            <p>Total Bill: <span id="modalTotalBill"></span></p>
+            <p>Payment: <span id="modalPayment"></span></p>
+            <p>Change: <span id="modalChange"></span></p>
+            <button id="closeModal" class="close-button">Close</button>
+        </div>
+    </div>
+
+    <script src="./Assets/JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
